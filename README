@@ -1,0 +1,7 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1722
+
+This is a reasonably complete syntax file for ColdFusion, up to at least version 7.0. I have pored over the LiveDocs fairly thoroughly to make sure that every valid tag, attribute, and function is included; nonetheless, if you find a problem, please let me know! The only current shortcoming that I'm aware of is that deprecated items are not highlighted properly, though they are tagged with the "Error" class.
+
+Two screenshots are available, one of plain CFML and one of a ColdFusion component:
+http://severinghaus.org/projects/cfml.png
+http://severinghaus.org/projects/cfc.png

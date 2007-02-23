@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:      ColdFusion <http://livedocs.macromedia.com/coldfusion/7/>
 " Maintainer:    Steven N. Severinghaus <sns@severinghaus.org>
-" Last Modified: 2006-11-29
-" Version:       0.1.1
+" Last Modified: 2007-02-23
+" Version:       0.1.2
 "
 " Based on the original version by Jeff Lanzarotta, expanded to include
 " new tags, attributes, and functions in CFMX and beyond.
@@ -172,6 +172,9 @@ syn keyword cfFunctionName contained XmlGetNodeType XmlNew XmlParse XmlSearch Xm
 syn keyword cfFunctionName contained XmlValidate Year YesNoFormat
 
 syn keyword cfDeprecated contained cfauthenticate cfimpersonate
+syn keyword cfDeprecated contained GetK2ServerDocCount GetK2ServerDocCountLimit GetTemplatePath
+syn keyword cfDeprecated contained IsK2ServerABroker IsK2ServerDocCountExceeded IsK2ServerOnline
+syn keyword cfDeprecated contained ParameterExists
 
 syn cluster htmlTagNameCluster add=cfTagName
 syn cluster htmlArgCluster add=cfArg,cfFunctionName

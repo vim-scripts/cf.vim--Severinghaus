@@ -2,7 +2,7 @@
 " Language:      ColdFusion <http://livedocs.macromedia.com/coldfusion/7/>
 " Maintainer:    Steven N. Severinghaus <sns@severinghaus.org>
 " Last Modified: 2007-02-23
-" Version:       0.1.2
+" Version:       0.1.3
 "
 " Based on the original version by Jeff Lanzarotta, expanded to include
 " new tags, attributes, and functions in CFMX and beyond.
@@ -44,66 +44,85 @@ syn keyword cfTagName contained cftextarea cftextinput cfthrow cftimer cftrace c
 syn keyword cfTagName contained cftree cftreeitem cftry cfupdate cfwddx cfxml
 
 " Tag attributes
-syn keyword cfArg contained accept access accessible action addnewline addtoken
-syn keyword cfArg contained agentname align appendkey appletsource applicationtimeout
-syn keyword cfArg contained archive arguments attachmentpath attributecollection
-syn keyword cfArg contained attributes backgroundvisible basetag bgcolor bindingname
+syn keyword cfArg contained abort accept access accessible action addnewline addtoken
+syn keyword cfArg contained agentname align appendkey appletsource application
+syn keyword cfArg contained applicationtimeout applicationtoken archive
+syn keyword cfArg contained argumentcollection arguments asciiextensionlist
+syn keyword cfArg contained attachmentpath attributecollection attributes autowidth
+syn keyword cfArg contained backgroundvisible basetag bcc bgcolor bind bindingname
 syn keyword cfArg contained blockfactor body bold border branch cachedafter cachedwithin
-syn keyword cfArg contained cc cfsqltype chartheight chartwidth checked class
-syn keyword cfArg contained clientmanagement clientstorage codebase colheaderalign
-syn keyword cfArg contained colheaderbold colheaderfont colheaderfontsize
-syn keyword cfArg contained colheaderitalic colheaders collection colorlist colspacing
-syn keyword cfArg contained columns completepath component connection context criteria
-syn keyword cfArg contained custom1 custom2 data dataalign databackgroundcolor
-syn keyword cfArg contained datacollection datasource daynames dbname dbserver dbtype
-syn keyword cfArg contained dbvarname debug default delete deletebutton deletefile
-syn keyword cfArg contained delimiter description destination detail directory display
-syn keyword cfArg contained displayname dn domain enablecab enablecfoutputonly enabled
-syn keyword cfArg contained encryption enctype enddate endrange endtime entry errorcode
-syn keyword cfArg contained exception expand expires expireurl expression extendedinfo
-syn keyword cfArg contained extends extensions external file filefield filename filter
-syn keyword cfArg contained fixnewline font fontbold fontembed fontitalic fontsize
-syn keyword cfArg contained foregroundcolor format formfields formula from grid
-syn keyword cfArg contained griddataalign gridlines groovecolor group header headeralign
-syn keyword cfArg contained headerbold headerfont headerfontsize headeritalic
-syn keyword cfArg contained headerlines height highlighthref hint href hrefkey hscroll
-syn keyword cfArg contained hspace htmltable id img imgopen imgstyle index input insert
-syn keyword cfArg contained insertbutton interval isolation italic item itemcolumn key
-syn keyword cfArg contained keyonly label labelformat language list loginstorage
+syn keyword cfArg contained casesensitive category categorytree cc cfsqltype charset
+syn keyword cfArg contained chartheight chartwidth checked class clientmanagement
+syn keyword cfArg contained clientstorage codebase colheaderalign colheaderbold
+syn keyword cfArg contained colheaderfont colheaderfontsize colheaderitalic colheaders
+syn keyword cfArg contained colheadertextcolor collection colorlist colspacing columns
+syn keyword cfArg contained completepath component condition connection contentid
+syn keyword cfArg contained context contextbytes contexthighlightbegin
+syn keyword cfArg contained contexthighlightend contextpassages cookiedomain criteria
+syn keyword cfArg contained custom1 custom2 custom3 custom4 data dataalign
+syn keyword cfArg contained databackgroundcolor datacollection datasource daynames
+syn keyword cfArg contained dbname dbserver dbtype dbvarname debug default delete
+syn keyword cfArg contained deletebutton deletefile delimiter delimiters description
+syn keyword cfArg contained destination detail directory disabled display displayname
+syn keyword cfArg contained disposition dn domain editable enablecab enablecfoutputonly
+syn keyword cfArg contained enabled encoded encryption enctype enddate endrange endtime
+syn keyword cfArg contained entry errorcode exception existing expand expires expireurl
+syn keyword cfArg contained expression extendedinfo extends extensions external
+syn keyword cfArg contained failifexists failto file filefield filename filter
+syn keyword cfArg contained firstdayofweek firstrowasheaders fixnewline font fontbold
+syn keyword cfArg contained fontembed fontitalic fontsize foregroundcolor format
+syn keyword cfArg contained formfields formula from generateuniquefilenames getasbinary
+syn keyword cfArg contained grid griddataalign gridlines groovecolor group
+syn keyword cfArg contained groupcasesensitive header headeralign headerbold headerfont
+syn keyword cfArg contained headerfontsize headeritalic headerlines headertextcolor
+syn keyword cfArg contained height highlighthref hint href hrefkey hscroll hspace html
+syn keyword cfArg contained htmltable id idletimeout img imgopen imgstyle index inline
+syn keyword cfArg contained input insert insertbutton interval isolation italic item
+syn keyword cfArg contained itemcolumn key keyonly label labelformat language list
+syn keyword cfArg contained listgroups locale localfile log loginstorage lookandfeel
 syn keyword cfArg contained mailerid mailto marginbottom marginleft marginright
-syn keyword cfArg contained margintop markersize markerstyle mask maxlength maxrows
-syn keyword cfArg contained message messagenumber method mimeattach mimetype mode
-syn keyword cfArg contained monthnames multiple name nameconflict namespace newdirectory
-syn keyword cfArg contained notsupported null numberformat onblur onchange onerror
-syn keyword cfArg contained onfocus onload onreset onsubmit onvalidate operation orderby
-syn keyword cfArg contained orientation output outputfile overwrite ownerpassword
-syn keyword cfArg contained pageheight pagetype pagewidth paintstyle param_1 param_2
-syn keyword cfArg contained param_3 param_4 param_5 param_6 param_7 param_8 param_9
-syn keyword cfArg contained parrent passthrough password path permissions picturebar
-syn keyword cfArg contained pieslicestyle port porttypename prefix preloader
-syn keyword cfArg contained preservedata procedure protocol provider providerdsn
-syn keyword cfArg contained proxybypass proxyserver publish query queryasroot range
-syn keyword cfArg contained recurse refreshlabel report requesttimeout required reset
-syn keyword cfArg contained resoleurl resultset retrycount returncode returntype
-syn keyword cfArg contained returnvariable rotated rowheaderalign rowheaderbold
+syn keyword cfArg contained margintop markersize markerstyle mask max maxlength maxrows
+syn keyword cfArg contained message messagenumber method mimeattach mimetype min mode
+syn keyword cfArg contained modifytype monthnames multipart multiple name nameconflict
+syn keyword cfArg contained namespace new newdirectory notsupported null numberformat
+syn keyword cfArg contained object omit onblur onchange onclick onerror onfocus
+syn keyword cfArg contained onkeydown onkeyup onload onmousedown onmouseup onreset
+syn keyword cfArg contained onsubmit onvalidate operation orderby orientation output
+syn keyword cfArg contained outputfile overwrite ownerpassword pageencoding pageheight
+syn keyword cfArg contained pagetype pagewidth paintstyle param_1 param_2 param_3
+syn keyword cfArg contained param_4 param_5 param_6 param_7 param_8 param_9 parent
+syn keyword cfArg contained parrent passive passthrough password path pattern
+syn keyword cfArg contained permissions picturebar pieslicestyle port porttypename
+syn keyword cfArg contained prefix preloader preservedata previouscriteria procedure
+syn keyword cfArg contained protocol provider providerdsn proxybypass proxypassword
+syn keyword cfArg contained proxyport proxyserver proxyuser publish query queryasroot
+syn keyword cfArg contained queryposition range rebind recurse redirect referral
+syn keyword cfArg contained refreshlabel remotefile replyto report requesttimeout
+syn keyword cfArg contained required reset resoleurl resolveurl result resultset
+syn keyword cfArg contained retrycount returnasbinary returncode returntype
+syn keyword cfArg contained returnvariable roles rotated rowheaderalign rowheaderbold
 syn keyword cfArg contained rowheaderfont rowheaderfontsize rowheaderitalic rowheaders
-syn keyword cfArg contained rowheaderwidth rowheight scale scalefrom scaleto scope
-syn keyword cfArg contained scriptprotect scriptsrc secure securitycontext select
-syn keyword cfArg contained selectcolor selected selecteddate selectedindex selectmode
-syn keyword cfArg contained seriescolor serieslabel seriesplacement server
-syn keyword cfArg contained serviceportname sessionmanagement sessiontimeout
-syn keyword cfArg contained setclientcookies setcookie setdomaincookies show3d
-syn keyword cfArg contained showborder showdebugoutput showerror showlegend showmarkers
-syn keyword cfArg contained showxgridlines showygridlines size skin sort
-syn keyword cfArg contained sortascendingbutton sortdescendingbutton sortxaxis source
-syn keyword cfArg contained sql src srcfile start startdate startrange startrow
-syn keyword cfArg contained starttime step stoponerror style subject tablename
-syn keyword cfArg contained tableowner tablequalifier taglib target task template text
-syn keyword cfArg contained textcolor textqualifier throwonfailure throwontimeout
+syn keyword cfArg contained rowheadertextcolor rowheaderwidth rowheight scale scalefrom
+syn keyword cfArg contained scaleto scope scriptprotect scriptsrc secure securitycontext
+syn keyword cfArg contained select selectcolor selected selecteddate selectedindex
+syn keyword cfArg contained selectmode separator seriescolor serieslabel seriesplacement
+syn keyword cfArg contained server serviceport serviceportname sessionmanagement
+syn keyword cfArg contained sessiontimeout setclientcookies setcookie setdomaincookies
+syn keyword cfArg contained show3d showborder showdebugoutput showerror showlegend
+syn keyword cfArg contained showmarkers showxgridlines showygridlines size skin sort
+syn keyword cfArg contained sortascendingbutton sortcontrol sortdescendingbutton
+syn keyword cfArg contained sortxaxis source spoolenable sql src srcfile start startdate
+syn keyword cfArg contained startrange startrow starttime status statuscode statustext
+syn keyword cfArg contained step stoponerror style subject suggestions
+syn keyword cfArg contained suppresswhitespace tablename tableowner tablequalifier
+syn keyword cfArg contained taglib target task template text textcolor textqualifier
+syn keyword cfArg contained throwonerror throwonerror throwonfailure throwontimeout
 syn keyword cfArg contained timeout timespan tipbgcolor tipstyle title to tooltip
-syn keyword cfArg contained toplevelvariable type unit url urlpath username userpassword
-syn keyword cfArg contained usetimezoneinfo validate value valuecolumn var variable
-syn keyword cfArg contained visible vscroll vspace width wmode wsdlfile xaxistitle
+syn keyword cfArg contained toplevelvariable transfermode type uid unit url urlpath
+syn keyword cfArg contained useragent username userpassword usetimezoneinfo validate
+syn keyword cfArg contained validateat value valuecolumn values valuesdelimiter
+syn keyword cfArg contained valuesdisplay var variable vertical visible vscroll vspace
+syn keyword cfArg contained webservice width wmode wraptext wsdlfile xaxistitle
 syn keyword cfArg contained xaxistype xoffset yaxistitle yaxistype yoffset
 
 " Functions
@@ -171,7 +190,8 @@ syn keyword cfFunctionName contained Week Wrap WriteOutput XmlChildPos XmlElemNe
 syn keyword cfFunctionName contained XmlGetNodeType XmlNew XmlParse XmlSearch XmlTransform
 syn keyword cfFunctionName contained XmlValidate Year YesNoFormat
 
-syn keyword cfDeprecated contained cfauthenticate cfimpersonate
+syn keyword cfDeprecated contained cfauthenticate cfimpersonate cfgraph cfgraphdata
+syn keyword cfDeprecated contained cfservlet cfservletparam cftextinput
 syn keyword cfDeprecated contained GetK2ServerDocCount GetK2ServerDocCountLimit GetTemplatePath
 syn keyword cfDeprecated contained IsK2ServerABroker IsK2ServerDocCountExceeded IsK2ServerOnline
 syn keyword cfDeprecated contained ParameterExists
